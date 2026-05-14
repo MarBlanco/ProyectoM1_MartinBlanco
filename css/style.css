@@ -1,0 +1,49 @@
+/*  VARIABLES COLORES */
+
+:root{
+
+    --fondo: #020617;
+    --panel: #0f172a;
+    --borde: #1e293b;
+
+    --texto: #ffffff;
+
+    --violeta:#8b5cf6;
+    --rosa: #fb7185;
+    --celeste: #38bdf8;
+    --amarillo: #facc15;
+    --verde: #2dd4bf;
+    --naranja: #fb923c;
+}
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* BODY */
+body{
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #0f172a, #020617 70%);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTENEDOR */
+.contenedor-principal{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+
