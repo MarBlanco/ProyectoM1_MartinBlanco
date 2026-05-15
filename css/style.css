@@ -47,3 +47,85 @@ body{
     padding: 30px;
 }
 
+/* ENCABEZADO */
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.btn-tema{
+    font-size: 28px;
+}
+
+.titulo-principal{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.titulo-principal span{
+    background:linear-gradient(
+        90deg,
+        var(--rosa),
+        var(--naranja),
+        var(--verde),
+        var(--celeste)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.selector-tipo{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.selector-tipo button{
+    padding: 1rem 2rem;
+    border: 1px solid var(--verde);
+    border-radius: 0.75rem;
+    transition: 0.3s;
+}
+
+.activo{
+    background: var(--violeta);
+}
+
+.selector-tipo button:hover{
+    border-color: var(--violeta) ;
+}
+
+.selector-cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;    
+}
+
+.botones-cantidad{
+    display: flex;    
+    align-items: center;
+    gap: 1rem;    
+}
+
+.botones-cantidad button{
+    width: 6rem;
+    height: 2.5rem;    
+    border: 1px solid var(--borde);
+    border-radius: 0.5rem;   
+    font-size: 1rem;
+    transition: 0.3s; 
+}
+
+.botones-cantidad activo{
+    background-color: var(--violeta);
+}
+
+.botones-cantidad button:hover{
+    border-color: var(--violeta);
+}
