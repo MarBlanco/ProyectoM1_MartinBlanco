@@ -122,10 +122,113 @@ body{
     transition: 0.3s; 
 }
 
-.botones-cantidad activo{
-    background-color: var(--violeta);
+.botones-cantidad .activo{
+    background: var(--violeta);
 }
 
 .botones-cantidad button:hover{
     border-color: var(--violeta);
 }
+
+/* PALETA */
+.zona-paleta{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.paleta-pintura{
+    position: relative;
+    width: 30rem;
+    height: 24rem;
+    background: #ececec;
+    border: 0.35rem solid #d4d4d8;
+    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
+    transform: none;
+    box-shadow: inset -8px -8px 20px rgba(0,0,0,0.08),0 10px 25px rgba(0,0,0,0.25);
+}
+
+.paleta-pintura::before{
+    content:"";
+    position:absolute;
+    top: 5rem;
+    right: 3rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    background: var(--fondo);
+    border-radius:50%;    
+}
+
+.color{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.4rem solid #d7d7db;
+}
+
+.color-1{
+    top: 2.8rem;
+    left: 5rem;
+    background: var(--violeta);
+}
+
+.color-2{
+    top: 1.3rem;
+    right: 10rem;
+    background: var(--naranja);
+}
+
+.color-3{
+    top: 12rem;
+    right: 2rem;
+    background: var(--celeste);
+}
+
+.color-4{
+    bottom: 8rem;
+    left: 1rem;
+    background: var(--rosa);
+}
+
+.color-5{
+    bottom: 1.5rem;
+    right: 8.5rem;
+    background: var(--amarillo);
+}
+
+.color-6{
+    bottom: 2rem;
+    left: 30%;
+    transform: translateX(-50%);
+    background: var(--verde);
+}
+
+/* BOTON GENERAR COLORES */
+.acciones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#btn-generar{
+    min-width:30rem;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texto);
+    background: linear-gradient(
+        90deg,
+        var(--rosa),
+        var(--naranja)        
+    );
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+#btn-generar:hover{
+    transform: translateY(-2px);
+}
+
+
