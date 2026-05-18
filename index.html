@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de paletas de colores</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -37,12 +38,12 @@
         <!-- paleta visual -->
         <section class="zona-paleta">
             <div class="paleta-pintura">
-                <div class="color color-1"></div>
-                <div class="color color-2"></div>
-                <div class="color color-3"></div>
-                <div class="color color-4"></div>
-                <div class="color color-5"></div>
-                <div class="color color-6"></div>
+                <div class="color color-1"><i class="fa-solid fa-lock"></i></div>
+                <div class="color color-2"><i class="fa-solid fa-lock"></i></div>
+                <div class="color color-3"><i class="fa-solid fa-lock"></i></div>
+                <div class="color color-4"><i class="fa-solid fa-lock"></i></div>
+                <div class="color color-5"><i class="fa-solid fa-lock"></i></div>
+                <div class="color color-6"><i class="fa-solid fa-lock"></i></div>
             </div>
         </section>
 
@@ -53,24 +54,31 @@
 
         <!-- extras -->
         <section class="acciones-extras">
-            <button>Copiar todo</button>
-            <button>Compartir</button>
-            <button>Exportar PNG</button>
-            <button>Guardar</button>
-            <button>Favoritos</button>
+            <button><i class="fa-regular fa-copy"></i>Copiar Todo</button>
+            <button><i class="fa-solid fa-share-nodes"></i>Compartir</button>
+            <button><i class="fa-regular fa-image"></i>Exportar PNG</button>
+            <button><i class="fa-regular fa-heart"></i>Guardar</button>
+            <button><i class="fa-regular fa-star"></i>Favoritos</button>
         </section>
 
         <!-- preview colores -->
         <section class="vista-previa">
-            <h2>Vista previa</h2>
-            <div id="contenedor-colores" class="contenedor-colores"></div>
+            <div id="contenedor-colores" class="contenedor-colores">
+                <h2>Vista previa</h2>
+                <div>#8B5CF6<i class="fa-regular fa-copy"></i></div>
+                <div>#FB7185<i class="fa-regular fa-copy"></i></div>
+                <div>#2DD4BF<i class="fa-regular fa-copy"></i></div>
+                <div>#FACC15<i class="fa-regular fa-copy"></i></div>
+                <div>#38B2F6<i class="fa-regular fa-copy"></i></div>
+                <div>#FB923C<i class="fa-regular fa-copy"></i></div>
+            </div>
+
+            <footer class="pie">
+                <p>Tip: Haz clic en el candado para bloquear o desbloquear un color</p>
+            </footer>
+
         </section>
-
     </main>
-
-    <footer class="pie">
-        <p>Tip: Haz clic en el candado para bloquear o desbloquear un color</p>
-    </footer>
 
     <script src="./js/app.js"></script>
 

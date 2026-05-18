@@ -1,6 +1,6 @@
 /*  VARIABLES COLORES */
 
-:root{
+:root {
 
     --fondo: #020617;
     --panel: #0f172a;
@@ -8,7 +8,7 @@
 
     --texto: #ffffff;
 
-    --violeta:#8b5cf6;
+    --violeta: #8b5cf6;
     --rosa: #fb7185;
     --celeste: #38bdf8;
     --amarillo: #facc15;
@@ -17,13 +17,13 @@
 }
 
 /* RESET */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-button{
+button {
     border: none;
     background: none;
     color: inherit;
@@ -32,7 +32,7 @@ button{
 }
 
 /* BODY */
-body{
+body {
     min-height: 100vh;
     background: radial-gradient(circle at top, #0f172a, #020617 70%);
     color: var(--texto);
@@ -40,104 +40,113 @@ body{
 }
 
 /* CONTENEDOR */
-.contenedor-principal{
+.contenedor-principal {
     width: 100%;
     max-width: 1000px;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
 }
 
 /* ENCABEZADO */
-.encabezado{
+.encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
 }
 
-.btn-tema{
-    font-size: 28px;
+.btn-tema {
+    font-size: 25px;
 }
 
-.titulo-principal{
+.titulo-principal {
     font-size: 3rem;
     font-weight: bold;
 }
 
-.titulo-principal span{
-    background:linear-gradient(
-        90deg,
-        var(--rosa),
-        var(--naranja),
-        var(--verde),
-        var(--celeste)
-    );
+.titulo-principal span {
+    background: linear-gradient(90deg,
+            var(--rosa),
+            var(--naranja),
+            var(--verde),
+            var(--celeste));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-.selector-tipo{
+.selector-tipo {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     justify-content: center;
 }
 
-.selector-tipo button{
-    padding: 1rem 2rem;
+.selector-tipo button {
+    width: 15rem;
+    height: 3rem;
     border: 1px solid var(--verde);
     border-radius: 0.75rem;
     transition: 0.3s;
 }
 
-.activo{
-    background: var(--violeta);
+.selector-tipo .activo {
+    background: linear-gradient(90deg,
+            var(--rosa),
+            var(--naranja),
+            var(--amarillo));    
 }
 
-.selector-tipo button:hover{
-    border-color: var(--violeta) ;
+.selector-tipo button:hover {
+    border-color: var(--violeta);
 }
 
-.selector-cantidad{
+.selector-cantidad {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 2rem;    
+    margin-bottom: 1rem;
 }
 
-.botones-cantidad{
-    display: flex;    
+.botones-cantidad {
+    display: flex;
     align-items: center;
-    gap: 1rem;    
+    gap: 1rem;
 }
 
-.botones-cantidad button{
+.botones-cantidad button {
     width: 6rem;
-    height: 2.5rem;    
+    height: 2.5rem;
     border: 1px solid var(--borde);
-    border-radius: 0.5rem;   
+    border-radius: 0.5rem;
     font-size: 1rem;
-    transition: 0.3s; 
+    transition: 0.3s;
+}
+
+.botones-cantidad button:not(.activo):hover{
+    border-color: var(--violeta);
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
+}
+
+.botones-cantidad:has(button:not(.activo):hover) .activo{
+    border-color: var(--borde);
+    box-shadow: none;
 }
 
 .botones-cantidad .activo{
-    background: var(--violeta);
-}
-
-.botones-cantidad button:hover{
     border-color: var(--violeta);
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
 }
 
 /* PALETA */
-.zona-paleta{
+.zona-paleta {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
 }
 
-.paleta-pintura{
+.paleta-pintura {
     position: relative;
     width: 30rem;
     height: 24rem;
@@ -145,21 +154,24 @@ body{
     border: 0.35rem solid #d4d4d8;
     border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
     transform: none;
-    box-shadow: inset -8px -8px 20px rgba(0,0,0,0.08),0 10px 25px rgba(0,0,0,0.25);
+    box-shadow: inset -8px -8px 20px rgba(0, 0, 0, 0.08), 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-.paleta-pintura::before{
-    content:"";
-    position:absolute;
+.paleta-pintura::before {
+    content: "";
+    position: absolute;
     top: 5rem;
     right: 3rem;
     width: 5.5rem;
     height: 5.5rem;
     background: var(--fondo);
-    border-radius:50%;    
+    border-radius: 50%;
 }
 
-.color{
+.color {
+    display: flex;
+    justify-content: right;
+    align-items: center;
     position: absolute;
     width: 5rem;
     height: 5rem;
@@ -167,37 +179,55 @@ body{
     border: 0.4rem solid #d7d7db;
 }
 
-.color-1{
+.color i{
+    font-size: 1rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.35);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.color i:hover{
+    transform: scale(1.1);
+}
+
+.color-1 {
     top: 2.8rem;
     left: 5rem;
     background: var(--violeta);
 }
 
-.color-2{
+.color-2 {
     top: 1.3rem;
     right: 10rem;
     background: var(--naranja);
 }
 
-.color-3{
+.color-3 {
     top: 12rem;
     right: 2rem;
     background: var(--celeste);
 }
 
-.color-4{
+.color-4 {
     bottom: 8rem;
     left: 1rem;
     background: var(--rosa);
 }
 
-.color-5{
+.color-5 {
     bottom: 1.5rem;
     right: 8.5rem;
     background: var(--amarillo);
 }
 
-.color-6{
+.color-6 {
     bottom: 2rem;
     left: 30%;
     transform: translateX(-50%);
@@ -205,30 +235,148 @@ body{
 }
 
 /* BOTON GENERAR COLORES */
-.acciones{
+.acciones {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
-#btn-generar{
-    min-width:30rem;
+#btn-generar {
+    min-width: 30rem;
     padding: 1rem 2rem;
     border-radius: 0.6rem;
     font-size: 1rem;
     font-weight: 600;
     color: var(--texto);
-    background: linear-gradient(
-        90deg,
-        var(--rosa),
-        var(--naranja)        
-    );
+    background: linear-gradient(90deg,
+            var(--rosa),
+            var(--naranja),
+            var(--amarillo));
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
     transition: 0.3s;
 }
 
-#btn-generar:hover{
+#btn-generar:hover {
     transform: translateY(-2px);
 }
 
+/* Acciones extras */
+.acciones-extras {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
 
+.acciones-extras button {
+    width: 7rem;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--panel);
+    border: 1px solid var(--borde);
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.acciones-extras button:hover {
+    border-color: var(--violeta);
+    transform: translateY(-2px);
+}
+
+.acciones-extras i{
+    font-size: 1.5rem;
+}
+
+/* vista previa */
+.vista-previa {
+    background: var(--panel);
+    border: 1px solid var(--borde);
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+}
+
+.vista-previa h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0rem;    
+}
+
+.contenedor-colores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contenedor-colores div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.contenedor-colores div::before {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.contenedor-colores i{
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contenedor-colores i:hover{
+    color: var(--violeta);
+}
+
+.contenedor-colores div:nth-of-type(1)::before {
+    background: var(--violeta);
+}
+
+.contenedor-colores div:nth-of-type(2)::before {
+    background: var(--rosa);
+}
+
+.contenedor-colores div:nth-of-type(3)::before {
+    background: var(--verde);
+}
+
+.contenedor-colores div:nth-of-type(4)::before {
+    background: var(--amarillo);
+}
+
+.contenedor-colores div:nth-of-type(5)::before {
+    background: var(--celeste);
+}
+
+.contenedor-colores div:nth-of-type(6)::before {
+    background: var(--naranja);
+}
+
+/* footer */
+.pie {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--borde);
+    border-radius: 0.75rem;
+}
+
+.pie p {
+    font-size: 0.9rem;
+    color: var(--texto)
+}
