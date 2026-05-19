@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de paletas de colores</title>
+    <title>Generador de Paletas</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-
-    <header class="encabezado">
-        <button class="btn-tema" type="button" aria-label="Modo claro">☀️</button>
-        <h1 class="titulo-principal">Generador de <span>paletas</span></h1>
-        <button class="btn-tema" type="button" aria-label="Modo oscuro">🌙</button>
-    </header>
-
     <main class="contenedor-principal">
 
-        <!-- tipo de selectores de colores -->
-        <section class="selector-tipo">
-            <button class="activo">Aleatorio</button>
-            <button>Complementarios</button>
+        <!-- TITULO -->
+        <header class="encabezado">
+            <h1 class="titulo-principal">Generador de <span>paletas</span></h1>
+        </header>
+
+        <!-- FORMATO -->
+        <section class="selector-formato">
+            <p>Formato</p>
+            <div class="opciones-formato">
+                <label class="activo-formato"><input type="radio" name="formato" value="HSL" checked>HSL</label>
+                <label><input type="radio" name="formato" value="HEX">HEX</label>
+            </div>
         </section>
 
-        <!-- cantidad de colores -->
+        <!-- CANTIDAD -->
         <section class="selector-cantidad">
             <p>Cantidad de colores</p>
             <div class="botones-cantidad">
@@ -35,49 +35,63 @@
             </div>
         </section>
 
-        <!-- paleta visual -->
-        <section class="zona-paleta">
-            <div class="paleta-pintura">
-                <div class="color color-1"><i class="fa-solid fa-lock"></i></div>
-                <div class="color color-2"><i class="fa-solid fa-lock"></i></div>
-                <div class="color color-3"><i class="fa-solid fa-lock"></i></div>
-                <div class="color color-4"><i class="fa-solid fa-lock"></i></div>
-                <div class="color color-5"><i class="fa-solid fa-lock"></i></div>
-                <div class="color color-6"><i class="fa-solid fa-lock"></i></div>
-            </div>
+        <!-- TARJETAS -->
+        <section class="paleta-colores" id="paleta-colores">
+            <article class="tarjeta-color">
+                <div class="preview-color color-1"></div>
+                <div class="info-color">
+                    <span>#8B5CF6</span>
+                    <button>copiar</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-color">
+                <div class="preview-color color-2"></div>
+                <div class="info-color">
+                    <span>#D4E15A</span>
+                    <button>copiar</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-color">
+                <div class="preview-color color-3"></div>
+                <div class="info-color">
+                    <span>#2066B5</span>
+                    <button>copiar</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-color">
+                <div class="preview-color color-4"></div>
+                <div class="info-color">
+                    <span>#7B35CC</span>
+                    <button>copiar</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-color">
+                <div class="preview-color color-5"></div>
+                <div class="info-color">
+                    <span>#AB5CE0</span>
+                    <button>copiar</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-color">
+                <div class="preview-color color-6"></div>
+                <div class="info-color">
+                    <span>#818EDA</span>
+                    <button>copiar</button>
+                </div>
+            </article>
         </section>
 
-        <!-- accion generar colores -->
+        <!-- BOTON -->
         <section class="acciones">
-            <button id="btn-generar">Generar colores</button>
+            <button id="btn-generar">Generar paletas</button>
+            <p id="mensaje-tip"></p>
         </section>
 
-        <!-- extras -->
-        <section class="acciones-extras">
-            <button><i class="fa-regular fa-copy"></i>Copiar Todo</button>
-            <button><i class="fa-solid fa-share-nodes"></i>Compartir</button>
-            <button><i class="fa-regular fa-image"></i>Exportar PNG</button>
-            <button><i class="fa-regular fa-heart"></i>Guardar</button>
-            <button><i class="fa-regular fa-star"></i>Favoritos</button>
-        </section>
-
-        <!-- preview colores -->
-        <section class="vista-previa">
-            <div id="contenedor-colores" class="contenedor-colores">
-                <h2>Vista previa</h2>
-                <div>#8B5CF6<i class="fa-regular fa-copy"></i></div>
-                <div>#FB7185<i class="fa-regular fa-copy"></i></div>
-                <div>#2DD4BF<i class="fa-regular fa-copy"></i></div>
-                <div>#FACC15<i class="fa-regular fa-copy"></i></div>
-                <div>#38B2F6<i class="fa-regular fa-copy"></i></div>
-                <div>#FB923C<i class="fa-regular fa-copy"></i></div>
-            </div>
-
-            <footer class="pie">
-                <p>Tip: Haz clic en el candado para bloquear o desbloquear un color</p>
-            </footer>
-
-        </section>
     </main>
 
     <script src="./js/app.js"></script>
