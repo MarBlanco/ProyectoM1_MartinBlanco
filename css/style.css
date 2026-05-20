@@ -105,6 +105,7 @@ body {
 
 input[type="radio"] {
     accent-color: var(--verde);
+    cursor: pointer;
 }
 
 
@@ -141,7 +142,7 @@ input[type="radio"] {
 .paleta-colores {
     display: grid;
     grid-template-columns:
-        repeat(auto-fit, minmax(140px, 1fr));
+        repeat(auto-fit, minmax(160px, 1fr));
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -194,6 +195,7 @@ input[type="radio"] {
 .info-color button:hover {
     border-color: var(--verde);
     color: var(--texto);
+    background: rgba(212, 225, 90, 0.1);
 }
 
 
@@ -249,11 +251,56 @@ input[type="radio"] {
 
 /* TIP */
 
-#mensaje-tip{
-    margin-top:1rem;
-    text-align:center;
-    color:var(--gris);
-    font-size:0.9rem;
-    opacity:0;
-    transition:0.3s;
+#mensaje-tip {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--gris);
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+/* Accesibilidad */
+
+button:focus,
+input:focus {
+    outline: 2px solid var(--verde);
+    outline-offset: 3px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+    .titulo-principal {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .selector-formato,
+    .selector-cantidad {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .paleta-colores {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .preview-color {
+        height: 10rem;
+    }
+
+    #btn-generar {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width:600px){
+    .paleta-colores{
+        grid-template-columns: 1fr;
+    }
 }
