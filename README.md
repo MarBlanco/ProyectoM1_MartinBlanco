@@ -66,7 +66,8 @@ Permite seleccionar diferentes cantidades de colores y generar nuevas combinacio
 
 ## Demo online
 
-https://MarBlanco.github.io/ProyectoM1_MartinBlanco.git
+https://marblanco.github.io/ProyectoM1_MartinBlanco/
+
 
 # Instalación y ejecución local
 
