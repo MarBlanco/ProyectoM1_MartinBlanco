@@ -64,9 +64,13 @@ Permite seleccionar diferentes cantidades de colores y generar nuevas combinacio
 
 ---
 
+## Demo online
+
+https://MarBlanco.github.io/ProyectoM1_MartinBlanco.git
+
 # Instalación y ejecución local
 
 1. Clonar el repositorio:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/MarBlanco/ProyectoM1_MartinBlanco.git
