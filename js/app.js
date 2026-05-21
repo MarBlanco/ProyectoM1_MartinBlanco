@@ -139,23 +139,7 @@ formatos.forEach(radio => {
             "activo-formato"
         );
         formatoActual =
-            radio.value;
-
-
-        /* VOLVER A 6 */
-
-        cantidadActual = 6;
-        botonesCantidad.forEach(btn => {
-            btn.classList.remove("activo");
-            if (btn.textContent === "6") {
-                btn.classList.add("activo");
-            }
-        });
-
-
-        generarPaleta(cantidadActual);
-
-        renderizarColores();
+            radio.value;        
 
 
         /* TIP */
