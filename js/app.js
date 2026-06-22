@@ -1,5 +1,7 @@
 /* ELEMENTOS HTML */
 
+(function () {
+
 const paletaColores = document.getElementById("paleta-colores");
 
 const btnGenerar = document.getElementById("btn-generar");
@@ -42,8 +44,8 @@ function generarColorHex() {
 
 function generarColorHsl() {
     const h = Math.floor(Math.random() * 360);
-    const s = Math.floor(Math.random() * 100);
-    const l = Math.floor(Math.random() * 100);
+    const s = Math.floor(Math.random() * 50) + 40; // 40-89%
+    const l = Math.floor(Math.random() * 40) + 30; // 30-69%
     return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
@@ -65,29 +67,44 @@ function generarPaleta(cantidad) {
 /* RENDERIZAR TARJETAS */
 
 function renderizarColores() {
-    paletaColores.innerHTML = "";
+    let html = "";
     colores.forEach(color => {
-        paletaColores.innerHTML += `
+        html += `
         <article class="tarjeta-color">
             <div class="preview-color" style="background:${color}"></div>
             <div class="info-color"><span>${color}</span>
-                <button class="btn-copiar">Copiar</button>
+                <button type="button" class="btn-copiar">Copiar</button>
             </div>
         </article>`;
     });
+    paletaColores.innerHTML = html;
 }
 
 /* BOTONES COPIAR */
 
-document.addEventListener("click", e => {
-    if (e.target.classList.contains("btn-copiar")
-    ) {
-        const color =
-            e.target
-                .previousElementSibling
-                .textContent;
-        navigator.clipboard.writeText(color);
-        mostrarTip("Color copiado correctamente");
+document.addEventListener("click", async (e) => {
+    const btn = e.target.closest('.btn-copiar');
+    if (!btn) return;
+    const info = btn.closest('.info-color');
+    if (!info) return;
+    const color = info.querySelector('span')?.textContent || '';
+    if (!color) return;
+
+    try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(color);
+        } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = color;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+        mostrarTip('Color copiado correctamente');
+    } catch (err) {
+        mostrarTip('No se pudo copiar el color');
+        console.error('Error copiando al portapapeles:', err);
     }
 });
 
@@ -147,3 +164,5 @@ formatos.forEach(radio => {
         mostrarTip(`Formato ${formatoActual} activado`);
     });
 });
+
+})();
