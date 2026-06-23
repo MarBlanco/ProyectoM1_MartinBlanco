@@ -2,9 +2,9 @@
 
 # Generador de Paletas de Colores
 
-Aplicación web interactiva para generar paletas de colores dinámicas en formatos HEX y HSL.
+Aplicación web interactiva desarrollada como Proyecto Integrador del Módulo 1 de Henry.
 
-Permite seleccionar diferentes cantidades de colores y generar nuevas combinaciones aleatorias.
+Permite generar paletas de colores dinámicas en formatos HEX y HSL, seleccionar diferentes cantidades de colores y copiar valores al portapapeles de forma rápida.
 
 ---
 
@@ -14,37 +14,79 @@ https://marblanco.github.io/ProyectoM1_MartinBlanco/
 
 ---
 
+## Capturas del Proyecto
+
+### Vista General
+
+![Captura 1](./assets/capturas/1.png)
+
+![Captura 2](./assets/capturas/2.png)
+
+![Captura 3](./assets/capturas/3.png)
+
+![Captura 4](./assets/capturas/4.png)
+
+---
+
+## Funcionalidades Implementadas
+
+### Selección de Formato
+
+* HEX
+* HSL
+
+![Formato HSL y HEX](./assets/promps%20IA/Formato%20hsl%20y%20hex.png)
+
+---
+
+### Generación Dinámica de Paletas
+
+* Generación aleatoria de colores
+* Actualización dinámica del DOM
+* Selección de 6, 8 o 9 colores
+
+![Generar Paletas](./assets/promps%20IA/Generar%20paletas.png)
+
+---
+
+### Copia al Portapapeles
+
+* Copia instantánea del color seleccionado
+* Feedback visual para el usuario
+
+![Botón Copiar](./assets/promps%20IA/Boton%20copiar.png)
+
+---
+
+## Video Demostrativo
+
+Video incluido dentro del repositorio:
+
+[Ver video demo](./assets/videos/ProyectoM1_MartinBlanco.mp4)
+
+---
+
 ## Instalación y Ejecución Local
 
-1. Clonar el repositorio:
+Clonar el repositorio:
 
 ```bash
 git clone https://github.com/MarBlanco/ProyectoM1_MartinBlanco.git
 ```
 
-2. Ingresar a la carpeta del proyecto:
+Ingresar al proyecto:
 
 ```bash
 cd ProyectoM1_MartinBlanco
 ```
 
-3. Abrir el archivo `index.html` en el navegador.
+Abrir:
 
----
+```txt
+index.html
+```
 
-## Funcionalidades
-
-* Generación dinámica de paletas de colores
-* Formatos HEX y HSL
-* Selección de cantidad:
-
-  * 6 colores
-  * 8 colores
-  * 9 colores
-* Copiar colores al portapapeles
-* Microfeedback visual
-* Render dinámico de tarjetas
-* Diseño responsive
+en cualquier navegador moderno.
 
 ---
 
@@ -53,42 +95,43 @@ cd ProyectoM1_MartinBlanco
 * HTML5
 * CSS3
 * JavaScript
+* DOM API
+* Clipboard API
 
 ---
 
-## Instrucciones de Uso
+## Características Técnicas
 
-1. Seleccionar el formato de color:
-
-   * HEX
-   * HSL
-
-2. Seleccionar la cantidad de colores:
-
-   * 6
-   * 8
-   * 9
-
-3. Presionar el botón:
-
-   * Generar paletas
-
-4. Presionar el botón:
-
-   * Copiar
-
-para copiar cualquier color al portapapeles.
+* Renderizado dinámico mediante JavaScript.
+* Generación aleatoria de colores HEX y HSL.
+* Manipulación dinámica del DOM.
+* Event Listeners para interacción del usuario.
+* Copia al portapapeles mediante Clipboard API.
+* Variables CSS para mantener consistencia visual.
+* Responsive Design.
+* Accesibilidad básica mediante focus visible y atributos ARIA.
 
 ---
 
-## Decisiones Técnicas
+## Estructura del Proyecto
 
-* Se utilizó renderizado dinámico mediante JavaScript.
-* La interfaz se actualiza dinámicamente según el formato y la cantidad seleccionada.
-* Los colores son generados aleatoriamente mediante funciones personalizadas.
-* Se utilizaron variables CSS para mejorar la mantenibilidad del código.
-* Se implementaron microfeedbacks visuales para mejorar la experiencia de usuario.
-* Se aplicaron conceptos básicos de accesibilidad y diseño responsive.
+```txt
+ProyectoM1_MartinBlanco
+│
+├── assets
+│   ├── capturas
+│   ├── promps IA
+│   └── videos
+│
+├── css
+│   └── style.css
+│
+├── js
+│   └── app.js
+│
+├── index.html
+└── README.md
+```
 
 ---
 
@@ -96,7 +139,6 @@ para copiar cualquier color al portapapeles.
 
 Martín Blanco
 
-Proyecto Integrador - Módulo 1 - Henry
+Proyecto Integrador - Módulo 1
 
-
-
+Bootcamp Full Stack Developer - Henry
