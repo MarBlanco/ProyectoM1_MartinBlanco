@@ -58,13 +58,9 @@ https://marblanco.github.io/ProyectoM1_MartinBlanco/
 
 ---
 
-## Video Demostrativo
+## Demo Animada
 
-Video incluido dentro del repositorio:
-
-[Ver video demo](./assets/videos/ProyectoM1_MartinBlanco.mp4)
-
----
+![Demo del proyecto](./assets/images/demo.gif)
 
 ## Instalación y Ejecución Local
 
@@ -121,7 +117,7 @@ ProyectoM1_MartinBlanco
 ├── assets
 │   ├── capturas
 │   ├── promps IA
-│   └── videos
+│   └── images
 │
 ├── css
 │   └── style.css
