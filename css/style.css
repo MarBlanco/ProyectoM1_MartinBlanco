@@ -35,7 +35,7 @@ body {
     width: 100%;
     max-width: 1400px;
     margin: auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 /* TITULO */
@@ -43,11 +43,11 @@ body {
 .encabezado {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .titulo-principal {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: bold;
 }
 
@@ -64,7 +64,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .selector-formato p,
@@ -144,7 +144,7 @@ input[type="radio"] {
     grid-template-columns:
         repeat(auto-fit, minmax(160px, 1fr));
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -162,7 +162,7 @@ input[type="radio"] {
 
 .preview-color{
     width: 100%;
-    height: 12rem;
+    height: 10rem;
     position: relative;
 }
 
@@ -305,6 +305,33 @@ button:focus,
 input:focus {
     outline: 2px solid var(--verde);
     outline-offset: 3px;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top: 1rem;
+    padding: 2rem;
+    border-top: 1px solid var(--borde);
+    text-align: center;
+}
+
+.footer-titulo{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--texto);
+    margin-bottom: .5rem;
+}
+
+.footer-autor{
+    color: var(--gris);
+    margin-bottom: .3rem;
+}
+
+.footer-info{
+    font-size: .85rem;
+    color: var(--gris);
+    opacity: .8;
 }
 
 
